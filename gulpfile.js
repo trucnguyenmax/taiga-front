@@ -16,9 +16,18 @@ var gulp = require("gulp"),
     plumber = require("gulp-plumber"),
     rename = require("gulp-rename"),
     gulpif = require("gulp-if"),
-    replace = require("gulp-replace"),
+    replace = require("gulp-replace");
+
+var sass;
+try {
     sass = require('gulp-sass')(require('node-sass'));
-    minifyCSS = require("gulp-clean-css"),
+} catch (e) {
+    sass = function() {
+        throw new Error("node-sass is not supported in the current Node runtime. Please use Node <= 18 (e.g. via 'nvm use 18').");
+    };
+}
+
+var minifyCSS = require("gulp-clean-css"),
     stylelint = require('gulp-stylelint');
     cache = require("gulp-cache"),
     cached = require("gulp-cached"),
