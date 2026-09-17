@@ -1,0 +1,656 @@
+/* stylelint-disable */
+
+// =============================================================================
+// TAIGA DARK THEME - CUSTOM STYLES
+// =============================================================================
+
+// Base & Layout
+html,
+body,
+.master {
+    background-color: $grey-05;
+    color: $color-black800;
+}
+
+.wrapper {
+    background-color: $grey-05;
+}
+
+.main {
+    background-color: $grey-05;
+    color: $color-black800;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+    color: $color-black900;
+}
+
+a, a:visited {
+    color: $color-link-primary;
+
+    &:hover {
+        color: lighten($color-link-primary, 10%);
+    }
+}
+
+p, span, label {
+    color: inherit;
+}
+
+// Top Navigation Bar
+.navbar {
+    background-color: $grey-10;
+    border-bottom: 1px solid $grey-20;
+
+    .nav-right {
+        a {
+            color: $grey-80;
+
+            &:hover,
+            &.active {
+                background-color: $grey-20;
+                color: $color-black900;
+
+                svg {
+                    fill: $color-black900;
+                }
+            }
+        }
+
+        svg {
+            fill: $grey-80;
+        }
+    }
+}
+
+.topnav-dropdown-wrapper {
+    .counter {
+        color: $color-black900;
+    }
+
+    .navbar-dropdown-notifications {
+        background-color: $grey-10;
+        border: 1px solid $grey-30;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+        color: $grey-80;
+
+        .header {
+            background-color: $grey-20;
+            border-bottom: 1px solid $grey-30;
+            color: $color-black900;
+        }
+
+        .notification-item {
+            border-bottom: 1px solid $grey-20;
+
+            &:hover {
+                background-color: $grey-20;
+            }
+        }
+    }
+}
+
+.navbar-dropdown {
+    background-color: $grey-10;
+    border: 1px solid $grey-30;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+
+    li a {
+        color: $grey-80;
+
+        &:hover {
+            background-color: $grey-20;
+            color: $color-black900;
+        }
+    }
+}
+
+// Sidebars & Secondary Menus
+.menu-secondary {
+    background-color: $grey-02;
+    border-right: 1px solid $grey-20;
+
+    .settings-nav {
+        background-color: $grey-02;
+    }
+
+    li {
+        background-color: $grey-02;
+
+        a {
+            color: $grey-70;
+
+            &:hover {
+                background-color: $grey-10;
+                color: $color-black900;
+            }
+        }
+
+        .active,
+        &.active a {
+            background-color: $grey-10;
+            color: $color-link-primary;
+
+            &:hover {
+                background-color: $grey-10;
+                color: $color-link-primary;
+            }
+        }
+    }
+}
+
+.menu-tertiary {
+    background-color: $grey-10;
+    border-right: 1px solid $grey-20;
+
+    ul li {
+        a {
+            color: $grey-70;
+        }
+
+        &:hover,
+        &:hover a {
+            background-color: $grey-20;
+            color: $color-black900;
+        }
+
+        &.active,
+        &.active a {
+            background-color: $grey-20;
+            color: $color-link-primary;
+        }
+    }
+}
+
+.settings-nav {
+    .active {
+        background-color: $grey-20;
+        color: $color-black900;
+
+        &:hover {
+            background-color: $grey-30;
+        }
+    }
+}
+
+// Form Controls & Inputs
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="search"],
+select,
+textarea {
+    background-color: $grey-10;
+    border: 1px solid $grey-30;
+    color: $color-black900;
+
+    &:focus {
+        border-color: $primary;
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $grey-50;
+    }
+}
+
+.select-box,
+.custom-select {
+    background-color: $grey-10;
+    border-color: $grey-30;
+    color: $color-black900;
+}
+
+// Buttons & Actions
+.button-gray {
+    background-color: $grey-20;
+    color: $grey-80;
+
+    &:hover {
+        background-color: $grey-30;
+        color: $color-black900;
+    }
+}
+
+.button-filter {
+    background-color: $grey-10;
+    border: 1px solid $grey-30;
+    color: $grey-80;
+
+    &:hover,
+    &.active {
+        background-color: $grey-20;
+        color: $color-black900;
+    }
+}
+
+.track-inner {
+    background-color: $grey-20;
+    color: $grey-70;
+
+    &:hover {
+        background-color: $grey-30;
+        color: $color-black900;
+    }
+}
+
+.upvote-btn a,
+.upvote-btn .vote-inner {
+    background-color: $grey-20;
+    color: $grey-80;
+
+    &:hover {
+        background-color: $grey-30;
+        color: $color-black900;
+    }
+}
+
+// Kanban Board
+.kanban-table {
+    background-color: $grey-05;
+
+    .kanban-table-header {
+        .task-colum-name {
+            background-color: $grey-10;
+            border-bottom: 2px solid $grey-30;
+            color: $color-black900;
+        }
+    }
+
+    .kanban-table-body {
+        .kanban-uses-box {
+            background-color: $grey-10;
+            border-color: $grey-20;
+            color: $color-black800;
+        }
+    }
+}
+
+// Taskboard & Scrum
+.taskboard-table {
+    background-color: $grey-05;
+
+    .taskboard-table-header {
+        .task-colum-name {
+            background-color: $grey-10;
+            border-bottom: 2px solid $grey-30;
+            color: $color-black900;
+        }
+    }
+
+    .taskboard-table-body {
+        .taskboard-cards-box {
+            background-color: $grey-10;
+            border-color: $grey-20;
+            color: $color-black800;
+        }
+    }
+}
+
+.taskboard-actions {
+    background-color: $grey-10;
+    border-color: $grey-20;
+}
+
+// Cards
+.card {
+    background-color: $grey-20;
+    border: 1px solid $grey-30;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+
+    &:hover {
+        background-color: $grey-30;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .4);
+    }
+
+    .card-inner {
+        background-color: transparent;
+        color: $color-black900;
+    }
+
+    .card-title a {
+        color: $color-black900;
+    }
+
+    .card-owner-actions {
+        background-color: rgba(0, 0, 0, .2);
+    }
+}
+
+.card-placeholder {
+    background-color: $grey-10;
+    border: 1px dashed $grey-30;
+}
+
+// Backlog & Epics
+.backlog-menu {
+    background-color: $grey-10;
+    border-color: $grey-20;
+    color: $grey-80;
+}
+
+.backlog-table {
+    background-color: $grey-05;
+
+    .backlog-table-body {
+        background-color: $grey-10;
+        border-color: $grey-20;
+    }
+
+    .user-story-row {
+        background-color: $grey-10;
+        border-bottom: 1px solid $grey-20;
+        color: $color-black800;
+
+        &:hover {
+            background-color: $grey-20;
+        }
+    }
+}
+
+.sprints-list {
+    background-color: $grey-10;
+
+    .sprint-row {
+        background-color: $grey-10;
+        border-bottom: 1px solid $grey-20;
+
+        &:hover {
+            background-color: $grey-20;
+        }
+    }
+}
+
+.epics-table-header {
+    background-color: $grey-10;
+    border-color: $grey-20;
+}
+
+.epic-row,
+.story-row {
+    background-color: $grey-10;
+    border-color: $grey-20;
+    color: $color-black800;
+
+    &:hover {
+        background-color: $grey-20;
+    }
+
+    .progress-bar {
+        background-color: $grey-30;
+    }
+}
+
+// Filters
+tg-filter {
+    background-color: $grey-10;
+    border-color: $grey-20;
+    color: $grey-80;
+}
+
+.filters-cats .filters-cat-single {
+    color: $grey-70;
+
+    &.selected,
+    &:hover {
+        background-color: $grey-20;
+        color: $color-black900;
+    }
+}
+
+.single-filter {
+    background-color: $grey-10;
+    border-color: $grey-20;
+    color: $grey-80;
+
+    &:hover {
+        background-color: $grey-20;
+    }
+
+    .number {
+        background-color: $grey-30;
+        color: $color-black900;
+    }
+}
+
+// Ticket & Entity Details
+.detail {
+    background-color: $grey-05;
+
+    .detail-header-container {
+        background-color: $grey-10;
+        border-bottom: 1px solid $grey-20;
+        color: $color-black800;
+    }
+
+    .detail-content {
+        background-color: $grey-05;
+        color: $color-black800;
+    }
+
+    .detail-title-wrapper .detail-subject {
+        color: $color-black900;
+    }
+}
+
+.ticket-data {
+    background-color: $grey-10;
+    border: 1px solid $grey-20;
+    color: $grey-80;
+}
+
+.ticket-estimation {
+    .ticket-role-points {
+        background-color: $grey-20;
+        color: $grey-80;
+
+        .points {
+            background-color: $grey-30;
+            color: $color-black900;
+        }
+    }
+}
+
+.ticket-watch .add-watcher,
+.ticket-watch .ticket-watch-button,
+.ticket-users-actions .ticket-users-action {
+    background-color: $grey-20;
+    color: $grey-80;
+
+    &:hover {
+        background-color: $grey-30;
+        color: $color-black900;
+    }
+
+    svg {
+        fill: $grey-80;
+    }
+}
+
+.duty-custom-fields {
+    .custom-fields-header {
+        background-color: $grey-10;
+        border-bottom: 1px solid $grey-20;
+        color: $color-black900;
+    }
+
+    .custom-field-single {
+        border-color: $grey-20;
+    }
+}
+
+.attachments-header,
+.related-userstories-header,
+.related-tasks-header {
+    background-color: $grey-10;
+    border-bottom: 1px solid $grey-20;
+    color: $color-black900;
+
+    .attachments-title,
+    .related-tasks-title {
+        color: $color-black900;
+    }
+}
+
+.single-attachment {
+    background-color: $grey-10;
+    border: 1px solid $grey-20;
+}
+
+.attachment-list .single-attachment {
+    background-color: $grey-10;
+    border-color: $grey-20;
+}
+
+// History & Comments
+.history-tabs {
+    background-color: $grey-10;
+    border-bottom: 1px solid $grey-20;
+
+    .history-tab {
+        color: $grey-70;
+
+        &.active,
+        &:hover {
+            color: $color-black900;
+        }
+    }
+}
+
+.comment .comment-edited {
+    background-color: $grey-10;
+}
+
+.activity-diff .key {
+    background-color: $grey-20;
+    color: $grey-80;
+}
+
+// Lightbox & Modals
+.lightbox {
+    background-color: rgba(15, 17, 23, .85);
+
+    .lightbox-inner,
+    .lightbox-content {
+        background-color: $grey-10;
+        border: 1px solid $grey-30;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
+        color: $color-black800;
+    }
+
+    .lightbox-header {
+        border-bottom: 1px solid $grey-20;
+
+        h2, h3 {
+            color: $color-black900;
+        }
+    }
+
+    .lightbox-footer {
+        background-color: $grey-05;
+        border-top: 1px solid $grey-20;
+    }
+}
+
+// Tables
+.basic-table,
+table {
+    border-color: $grey-20;
+
+    thead th {
+        background-color: $grey-10;
+        border-color: $grey-20;
+        color: $color-black900;
+    }
+
+    tr {
+        border-color: $grey-20;
+
+        &:hover {
+            background-color: $grey-20;
+        }
+    }
+
+    td {
+        border-color: $grey-20;
+        color: $color-black800;
+    }
+}
+
+// Wiki & Markdown
+.wiki-summary.summary {
+    background-color: $grey-10;
+    color: $grey-80;
+}
+
+.duty-content .markdown,
+.wysiwyg-content {
+    color: $color-black800;
+
+    pre,
+    code {
+        background-color: $code-bg;
+        border: 1px solid $grey-30;
+        color: $grey-90;
+    }
+
+    blockquote {
+        background-color: $grey-10;
+        border-left: 3px solid $primary;
+        color: $grey-80;
+    }
+}
+
+// Intro.js & Tooltips
+.introjs-overlay {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.introjs-tooltip {
+    background-color: $grey-10;
+    border: 1px solid $grey-30;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+    color: $color-black800;
+}
+
+// Search
+.search-filter a {
+    background-color: $grey-10;
+    color: $grey-80;
+
+    &.active {
+        background-color: $grey-20;
+        color: $color-black900;
+    }
+}
+
+// Project & Settings Admin
+.admin-menu li {
+    border-color: $grey-20;
+
+    &:hover {
+        background-color: $grey-10;
+    }
+}
+
+.project-values-title {
+    background-color: $grey-10;
+    color: $color-black900;
+}
+
+.category-config .category-items {
+    background-color: $grey-10;
+    border-color: $grey-20;
+}
+
+.submit-row {
+    background-color: $grey-05;
+    border-top: 1px solid $grey-20;
+}
+
+/* stylelint-enable */
+
